@@ -257,6 +257,18 @@ namespace MultiColSLAM
 		pangolin::BindToContext("MultiCol-SLAM: Map Viewer");
 	}
 
+	void cSystem::ShutdownWindows()
+	{
+		cout << "System shutdown" << endl;
+		mpLocalMapper->RequestFinish();
+		mpLoopCloser->RequestFinish();
+		mpViewer->RequestFinish();
+
+		cout << "Requested to finish local mapper, loop closer and map publisher" << endl;
+		// Wait until all thread have effectively stopped
+	}
+
+
 	void cSystem::SaveMKFTrajectoryLAFIDA(const string &filename)
 	{
 		cout << endl << "Saving MKF trajectory to " << filename << " ..." << endl;
@@ -288,4 +300,18 @@ namespace MultiColSLAM
 		}
 		f.close();
 	}
+
+	int cSystem::GetTotalMapPoints()
+	{
+	    int nMPs = mpMap->GetAllMapPoints().size();
+	    return nMPs;
+	}
+
+	int cSystem::GetTrackingState()
+	{
+	    int state = mpTracker->getState();
+	    return state;
+	}
+
+
 }

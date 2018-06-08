@@ -124,6 +124,8 @@ namespace MultiColSLAM
 		void Reset();
 
 		int GetNrCams();
+
+		int getState();
 	protected:
 
 		std::vector<std::vector<std::string>> imagePaths;

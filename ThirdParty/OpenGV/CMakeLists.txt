@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 2.4.6)
+add_definitions(-std=c++11)
 project(opengv)
 
 set (OPENGV_VERSION_MAJOR 1)

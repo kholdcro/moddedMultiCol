@@ -4,7 +4,7 @@ cd ThirdParty/DBoW2
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j
+make -j4
 
 
 cd ../../
@@ -17,7 +17,7 @@ cd g2o
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make
+make -j4
 
 echo "Configuring and building Thirdparty/opengv ..."
 
@@ -26,7 +26,7 @@ cd ../../OpenGV
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j
+make -j4
 
 echo "Configuring and building MultiCol-SLAM ..."
 cd ../../../
@@ -34,4 +34,4 @@ echo $(pwd)
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j
+make -j4

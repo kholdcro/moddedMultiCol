@@ -1408,4 +1408,9 @@ bool cTracking::CheckFinished()
 {
 	return finished;
 }
+
+int cTracking::getState()
+{
+	return mState;
+}
 }

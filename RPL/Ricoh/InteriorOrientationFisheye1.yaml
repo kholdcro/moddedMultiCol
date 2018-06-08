@@ -1,0 +1,49 @@
+%YAML:1.0
+
+# Camera Parameters. Adjust them!
+# Camera calibration parameters camera back
+Camera.Iw: 960
+Camera.Ih: 960
+
+# hyperparameters
+Camera.nrpol: 5
+Camera.nrinvpol: 13
+
+# forward polynomial f(\rho)
+Camera.a0: -2.983768e+02
+Camera.a1: 0.0
+Camera.a2: 1.518902e-03
+Camera.a3: -2.470020e-06
+Camera.a4: 5.221487e-09
+
+# backward polynomial rho(\theta)
+Camera.pol0: 450.994270
+Camera.pol1: 253.533277
+Camera.pol2: -21.780437
+Camera.pol3: 37.284552
+Camera.pol4: 22.434890
+Camera.pol5: -11.596071
+Camera.pol6: 15.297621
+Camera.pol7: 16.615608
+Camera.pol8: -14.697508
+Camera.pol9: -10.966117
+Camera.pol10: 6.482704
+Camera.pol11: 6.502717
+Camera.pol12: 1.364355 
+
+
+# affine matrix
+Camera.c: 0.999021
+Camera.d: -0.012731
+Camera.e: 0.014075
+
+
+# principal point
+Camera.u0: 481.465349
+Camera.v0: 481.063238
+
+
+# create a mirror mask for fisheye cameras
+Camera.mirrorMask: 1
+    
+

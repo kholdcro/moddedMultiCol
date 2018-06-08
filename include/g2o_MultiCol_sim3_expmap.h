@@ -28,6 +28,7 @@
 #include "g2o/types/types_seven_dof_expmap.h"
 
 #include <Eigen/StdVector>
+#include <unordered_map>
 
 #include "misc.h"
 #include "cam_model_omni.h"

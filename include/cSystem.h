@@ -80,11 +80,15 @@ namespace MultiColSLAM
 		// It waits until all threads have finished.
 		// This function must be called before saving the trajectory.
 		void Shutdown();
+		void ShutdownWindows();
 
 		// Save camera trajectory in the.
 		// Call first Shutdown()
 		// See format details at: http://www.ipf.kit.edu/lafida.php
 		void SaveMKFTrajectoryLAFIDA(const string &filename);
+
+		int GetTotalMapPoints();
+		int GetTrackingState();
 
 	private:
 

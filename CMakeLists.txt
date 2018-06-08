@@ -16,6 +16,10 @@
 # You should have received a copy of the GNU General Public License
 # along with MultiCol-SLAM . If not, see <http://www.gnu.org/licenses/>.
 
+add_definitions(-std=c++11)
+# set (CMAKE_CXX_STANDARD 11)
+cmake_minimum_required(VERSION 3.2)
+
 project (MultiCol-SLAM)
 
 IF(NOT CMAKE_BUILD_TYPE)
@@ -198,3 +202,8 @@ MESSAGE("${PROJECT_NAME}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Lafida)
 add_executable(multi_col_slam_lafida Examples/Lafida/mult_col_slam_lafida.cpp)
 target_link_libraries(multi_col_slam_lafida ${PROJECT_NAME})
+
+MESSAGE("${PROJECT_NAME}")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/RPL/Ricoh)
+add_executable(RicohFull RPL/Ricoh/mult_col_slam_ricoh.cpp)
+target_link_libraries(RicohFull ${PROJECT_NAME})
