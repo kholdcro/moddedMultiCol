@@ -207,3 +207,8 @@ MESSAGE("${PROJECT_NAME}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/RPL/Ricoh)
 add_executable(RicohFull RPL/Ricoh/mult_col_slam_ricoh.cpp)
 target_link_libraries(RicohFull ${PROJECT_NAME})
+
+MESSAGE("${PROJECT_NAME}")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/OneLens/Ricoh)
+add_executable(RicohOne OneLens/Ricoh/mult_col_slam_ricoh.cpp)
+target_link_libraries(RicohOne ${PROJECT_NAME})
